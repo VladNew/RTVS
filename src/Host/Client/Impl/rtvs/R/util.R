@@ -306,9 +306,9 @@ save_state <- function() {
     # This function runs when client is already disconnected, so locstr() cannot be used, since it requires
     # a connected client to provide translated strings. However, since messages are not user-visible and are
     # here for logging purposes only, they don't need to be localized in the first place.
-    message(sprintf('Autosaving workspace to image "%s" ...', autosave_filename), appendLF = FALSE);
+    # message(sprintf('Autosaving workspace to image "%s" ...', autosave_filename), appendLF = FALSE);
     save.image(autosave_filename);
-    message(' workspace saved successfully.');
+    # message(' workspace saved successfully.');
 }
 
 enable_autosave <- function(delete_existing) {
